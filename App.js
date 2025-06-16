@@ -1,21 +1,15 @@
 import React, { useState } from 'react';
-import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
+import { View, Text, TouchableOpacity } from 'react-native';
+import {TAROT_CARDS} from './tarotcards';
+import styles from './styles';
 
-const TAROT_CARDS = [
-  { name: 'The Fool' },
-  { name: 'The Magician' },
-  { name: 'The High Priestess' },
-  { name: 'The Empress' },
-  { name: 'The Emperor' },
-  { name: 'The Hierophant' },
-  { name: 'The Lovers' },
-  { name: 'The Chariot' },
-  { name: 'Strength' },
-  { name: 'The Hermit' },
-  // ... 더 많은 카드 추가 가능
-];
+import { NavigationContainer } from '@react-navigation/native';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
-export default function App() {
+
+
+// 타로 뽑기 탭
+function TarotScreen() {
   const [pickedCard, setPickedCard] = useState(null);
 
   const pickRandomCard = () => {
@@ -26,70 +20,59 @@ export default function App() {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>타로 카드 뽑기</Text>
-
       <View style={styles.cardContainer}>
-        {/* 카드 이미지 영역 (이미지는 여기다가 직접 Image 컴포넌트로 넣으시면 됩니다) */}
         {pickedCard ? (
           <>
-            {/* 아래에 이미지 삽입하면 됨 */}
-            {/* <Image source={require('./assets/fool.jpg')} style={styles.cardImage} /> */}
+            {/* 여기에서 Image 컴포넌트로 카드 이미지 삽입 가능 */}
             <Text style={styles.cardName}>{pickedCard.name}</Text>
           </>
         ) : (
-          <Text style={styles.cardHint}>여기에 카드 이미지와 이름이 표시됩니다</Text>
+          <Text style={styles.cardHint}>
+            여기에 카드 이미지와 이름이 표시됩니다
+          </Text>
         )}
       </View>
-
       <TouchableOpacity style={styles.button} onPress={pickRandomCard}>
-        <Text style={styles.buttonText}>
-          타로 카드 한 장 뽑기
-        </Text>
+        <Text style={styles.buttonText}>타로 카드 한 장 뽑기</Text>
       </TouchableOpacity>
     </View>
   );
 }
 
-// 스타일은 예시
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  title: {
-    fontSize: 28,
-    fontWeight: 'bold',
-    marginBottom: 40,
-  },
-  cardContainer: {
-    width: 250,
-    height: 350,
-    borderWidth: 2,
-    borderColor: '#bbb',
-    borderRadius: 18,
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: '#faf6e9',
-    marginBottom: 40,
-  },
-  cardHint: {
-    color: '#aaa',
-  },
-  cardName: {
-    marginTop: 12,
-    fontSize: 24,
-    fontWeight: 'bold',
-  },
-  button: {
-    backgroundColor: '#bb86fc',
-    paddingHorizontal: 24,
-    paddingVertical: 14,
-    borderRadius: 8,
-  },
-  buttonText: {
-    color: '#fff',
-    fontWeight: 'bold',
-    fontSize: 18,
-  }
-});
+// 결과 보기 탭(예시)
+function ResultScreen() {
+  return (
+    <View style={styles.container}>
+      <Text style={styles.title}>결과 보기</Text>
+      <Text style={{ marginTop: 16, color: '#555' }}>
+        여기에서 해석/설명을 표시할 수 있습니다.
+      </Text>
+    </View>
+  );
+}
+
+function Settings() {
+  return (
+    <View style={styles.container}>
+      <Text style={styles.title}>settings</Text>
+    </View>
+  );
+}
+
+const Tab = createBottomTabNavigator();
+
+export default function App() {
+  return (
+    <NavigationContainer>
+      <Tab.Navigator
+        screenOptions={{
+          headerShown: false,
+        }}
+      >
+        <Tab.Screen name="타로 뽑기" component={TarotScreen} />
+        <Tab.Screen name="결과 보기" component={ResultScreen} />
+        <Tab.Screen name="환경 설정" component={Settings} />
+      </Tab.Navigator>
+    </NavigationContainer>
+  );
+}
