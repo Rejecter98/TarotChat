@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { View, Text, Image, TouchableOpacity } from 'react-native';
 import {TAROT_CARDS} from './assets/components/tarotcards';
+import ThreeCardSpread from './assets/components/three_spread';
 import styles from './styles';
 
 import { NavigationContainer } from '@react-navigation/native';
@@ -76,7 +77,7 @@ export default function App() {
         }}
       >
         <Tab.Screen name="한장 뽑기" component={TarotScreen} />
-        <Tab.Screen name="3장 스프레드" component={ResultScreen} />
+        <Tab.Screen name="3장 스프레드" component={ThreeCardSpread} />
         <Tab.Screen name="환경 설정" component={Settings} />
       </Tab.Navigator>
     </NavigationContainer>
