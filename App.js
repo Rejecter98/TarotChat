@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { View, Text, TouchableOpacity } from 'react-native';
-import {TAROT_CARDS} from './tarotcards';
+import { View, Text, Image, TouchableOpacity } from 'react-native';
+import {TAROT_CARDS} from './assets/components/tarotcards';
 import styles from './styles';
 
 import { NavigationContainer } from '@react-navigation/native';
@@ -19,27 +19,33 @@ function TarotScreen() {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>타로 카드 뽑기</Text>
-      <View style={styles.cardContainer}>
-        {pickedCard ? (
-          <>
-            {/* 여기에서 Image 컴포넌트로 카드 이미지 삽입 가능 */}
-            <Text style={styles.cardName}>{pickedCard.name}</Text>
-          </>
-        ) : (
-          <Text style={styles.cardHint}>
-            여기에 카드 이미지와 이름이 표시됩니다
-          </Text>
-        )}
-      </View>
-      <TouchableOpacity style={styles.button} onPress={pickRandomCard}>
-        <Text style={styles.buttonText}>타로 카드 한 장 뽑기</Text>
-      </TouchableOpacity>
+    <Text style={styles.title}>타로 카드 뽑기</Text>
+    <View style={styles.cardContainer}>
+      {pickedCard ? (
+        <>
+          {pickedCard.image && (
+            <Image
+              source={pickedCard.image}
+              style={{ width: 150, height: 240, marginBottom: 8 }} // 원하는 크기로 조절
+              resizeMode="contain"
+            />
+          )}
+          <Text style={styles.cardName}>{pickedCard.name}</Text>
+        </>
+      ) : (
+        <Text style={styles.cardHint}>
+          여기에 카드 이미지와 이름이 표시됩니다
+        </Text>
+      )}
     </View>
+    <TouchableOpacity style={styles.button} onPress={pickRandomCard}>
+      <Text style={styles.buttonText}>타로 카드 한 장 뽑기</Text>
+    </TouchableOpacity>
+  </View>
   );
 }
 
-// 결과 보기 탭(예시)
+// 3장스프레드
 function ResultScreen() {
   return (
     <View style={styles.container}>
@@ -69,8 +75,8 @@ export default function App() {
           headerShown: false,
         }}
       >
-        <Tab.Screen name="타로 뽑기" component={TarotScreen} />
-        <Tab.Screen name="결과 보기" component={ResultScreen} />
+        <Tab.Screen name="한장 뽑기" component={TarotScreen} />
+        <Tab.Screen name="3장 스프레드" component={ResultScreen} />
         <Tab.Screen name="환경 설정" component={Settings} />
       </Tab.Navigator>
     </NavigationContainer>

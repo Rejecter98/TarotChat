@@ -1,0 +1,93 @@
+export const MAJOR = [
+    { name: 'The Fool', image: require('../images/tarot/00.jpg') },
+    { name: 'The Magician', image: require('../images/tarot/01.jpg') },
+    { name: 'The High Priestess', image: require('../images/tarot/02.jpg') },
+    { name: 'The Empress', image: require('../images/tarot/03.jpg') },
+    { name: 'The Emperor', image: require('../images/tarot/04.jpg') },
+    { name: 'The Hierophant', image: require('../images/tarot/05.jpg') },
+    { name: 'The Lovers', image: require('../images/tarot/06.jpg') },
+    { name: 'The Chariot', image: require('../images/tarot/07.jpg') },
+    { name: 'Strength', image: require('../images/tarot/08.jpg') },
+    { name: 'The Hermit', image: require('../images/tarot/09.jpg') },
+    { name: 'Wheel of Fortune', image: require('../images/tarot/10.jpg') },
+    { name: 'Justice', image: require('../images/tarot/11.jpg') },
+    { name: 'The Hanged Man', image: require('../images/tarot/12.jpg') },
+    { name: 'Death', image: require('../images/tarot/13.jpg') },
+    { name: 'Temperance', image: require('../images/tarot/14.jpg') },
+    { name: 'The Devil', image: require('../images/tarot/15.jpg') },
+    { name: 'The Tower', image: require('../images/tarot/16.jpg') },
+    { name: 'The Star', image: require('../images/tarot/17.jpg') },
+    { name: 'The Moon', image: require('../images/tarot/18.jpg') },
+    { name: 'The Sun', image: require('../images/tarot/19.jpg') },
+    { name: 'Judgement', image: require('../images/tarot/20.jpg') },
+    { name: 'The World', image: require('../images/tarot/21.jpg') }
+  ];
+  
+  export const MINOR = [
+    // Cups
+    { name: 'Cups01', image: require('../images/tarot/Cups01.jpg') },
+    { name: 'Cups02', image: require('../images/tarot/Cups02.jpg') },
+    { name: 'Cups03', image: require('../images/tarot/Cups03.jpg') },
+    { name: 'Cups04', image: require('../images/tarot/Cups04.jpg') },
+    { name: 'Cups05', image: require('../images/tarot/Cups05.jpg') },
+    { name: 'Cups06', image: require('../images/tarot/Cups06.jpg') },
+    { name: 'Cups07', image: require('../images/tarot/Cups07.jpg') },
+    { name: 'Cups08', image: require('../images/tarot/Cups08.jpg') },
+    { name: 'Cups09', image: require('../images/tarot/Cups09.jpg') },
+    { name: 'Cups10', image: require('../images/tarot/Cups10.jpg') },
+    { name: 'Cups11', image: require('../images/tarot/Cups11.jpg') },
+    { name: 'Cups12', image: require('../images/tarot/Cups12.jpg') },
+    { name: 'Cups13', image: require('../images/tarot/Cups13.jpg') },
+    { name: 'Cups14', image: require('../images/tarot/Cups14.jpg') },
+
+    // Swords
+    { name: 'Swords01', image: require('../images/tarot/Swords01.jpg') },
+    { name: 'Swords02', image: require('../images/tarot/Swords02.jpg') },
+    { name: 'Swords03', image: require('../images/tarot/Swords03.jpg') },
+    { name: 'Swords04', image: require('../images/tarot/Swords04.jpg') },
+    { name: 'Swords05', image: require('../images/tarot/Swords05.jpg') },
+    { name: 'Swords06', image: require('../images/tarot/Swords06.jpg') },
+    { name: 'Swords07', image: require('../images/tarot/Swords07.jpg') },
+    { name: 'Swords08', image: require('../images/tarot/Swords08.jpg') },
+    { name: 'Swords09', image: require('../images/tarot/Swords09.jpg') },
+    { name: 'Swords10', image: require('../images/tarot/Swords10.jpg') },
+    { name: 'Swords11', image: require('../images/tarot/Swords11.jpg') },
+    { name: 'Swords12', image: require('../images/tarot/Swords12.jpg') },
+    { name: 'Swords13', image: require('../images/tarot/Swords13.jpg') },
+    { name: 'Swords14', image: require('../images/tarot/Swords14.jpg') },
+  
+
+    // Wands
+    { name: 'Wands01', image: require('../images/tarot/Wands01.jpg') },
+    { name: 'Wands02', image: require('../images/tarot/Wands02.jpg') },
+    { name: 'Wands03', image: require('../images/tarot/Wands03.jpg') },
+    { name: 'Wands04', image: require('../images/tarot/Wands04.jpg') },
+    { name: 'Wands05', image: require('../images/tarot/Wands05.jpg') },
+    { name: 'Wands06', image: require('../images/tarot/Wands06.jpg') },
+    { name: 'Wands07', image: require('../images/tarot/Wands07.jpg') },
+    { name: 'Wands08', image: require('../images/tarot/Wands08.jpg') },
+    { name: 'Wands09', image: require('../images/tarot/Wands09.jpg') },
+    { name: 'Wands10', image: require('../images/tarot/Wands10.jpg') },
+    { name: 'Wands11', image: require('../images/tarot/Wands11.jpg') },
+    { name: 'Wands12', image: require('../images/tarot/Wands12.jpg') },
+    { name: 'Wands13', image: require('../images/tarot/Wands13.jpg') },
+    { name: 'Wands14', image: require('../images/tarot/Wands14.jpg') },
+  
+    // Pentacles
+    { name: 'Pents01', image: require('../images/tarot/Pents01.jpg') },
+    { name: 'Pents02', image: require('../images/tarot/Pents02.jpg') },
+    { name: 'Pents03', image: require('../images/tarot/Pents03.jpg') },
+    { name: 'Pents04', image: require('../images/tarot/Pents04.jpg') },
+    { name: 'Pents05', image: require('../images/tarot/Pents05.jpg') },
+    { name: 'Pents06', image: require('../images/tarot/Pents06.jpg') },
+    { name: 'Pents07', image: require('../images/tarot/Pents07.jpg') },
+    { name: 'Pents08', image: require('../images/tarot/Pents08.jpg') },
+    { name: 'Pents09', image: require('../images/tarot/Pents09.jpg') },
+    { name: 'Pents10', image: require('../images/tarot/Pents10.jpg') },
+    { name: 'Pents11', image: require('../images/tarot/Pents11.jpg') },
+    { name: 'Pents12', image: require('../images/tarot/Pents12.jpg') },
+    { name: 'Pents13', image: require('../images/tarot/Pents13.jpg') },
+    { name: 'Pents14', image: require('../images/tarot/Pents14.jpg') }
+  ];
+
+export const TAROT_CARDS = [...MAJOR, ...MINOR];
